@@ -109,4 +109,25 @@ export const userAPI = {
     api.delete(`/users/${id}`)
 };
 
+// Sessions API calls
+export const sessionAPI = {
+  getAll: () => 
+    api.get('/sessions'),
+  
+  getById: (id) => 
+    api.get(`/sessions/${id}`),
+  
+  create: (data) => 
+    api.post('/sessions', data),
+  
+  markAttendance: (qrCode) => 
+    api.post('/sessions/mark-attendance', { qrCode }),
+  
+  getSessionAttendance: (id) => 
+    api.get(`/sessions/${id}/attendance`),
+  
+  getMyAttendance: () => 
+    api.get('/sessions/student/attendance')
+};
+
 export default api;

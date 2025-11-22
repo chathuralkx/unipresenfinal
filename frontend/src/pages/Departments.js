@@ -23,24 +23,6 @@ const Departments = () => {
     },
     {
       id: 3,
-      name: 'Environmental and  Industrial Sciences',
-      description: 'Department of Environmental and  Industrial Sciences',
-      website: 'https://sci.pdn.ac.lk/eis/',
-      email: 'headeis@sci.pdn.ac.lk',
-      phone: '+94 81 239 4646',
-      icon: '🏭'
-    },
-    {
-      id: 4,
-      name: 'Geology',
-      description: 'Department of Geology',
-      website: 'https://sci.pdn.ac.lk/geology/',
-      email: 'geology@pdn.ac.lk',
-      phone: '+94 81 239 4200',
-      icon: '🪨'
-    },
-    {
-      id: 5,
       name: 'Mathematics',
       description: 'Department of Mathematics',
       website: 'https://sci.pdn.ac.lk/mathematics/',
@@ -49,16 +31,7 @@ const Departments = () => {
       
     },
     {
-      id: 6,
-      name: 'Molecular Biology and Biotechnology',
-      description: 'Department of Molecular Biology and Biotechnology',
-      website: 'https://sci.pdn.ac.lk/molecular/',
-      email: 'sanathr@pdn.ac.lk',
-      phone: ' +94 81 239 4406',
-      icon: '🧬'
-    },
-    {
-      id: 7,
+      id: 4,
       name: 'Physics',
       description: 'Department of Physics',
       website: 'https://sci.pdn.ac.lk/physics/',

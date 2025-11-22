@@ -13,6 +13,7 @@ const userRoutes = require('./routes/users');
 const resourceRoutes = require('./routes/resources');
 const bookingRoutes = require('./routes/bookings');
 const dashboardRoutes = require('./routes/dashboard');
+const sessionRoutes = require('./routes/sessions');
 
 // Middleware Setup
 app.use(cors({
@@ -47,6 +48,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/resources', resourceRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/sessions', sessionRoutes);
 
 // Test route to check if server is working
 app.get('/api/test', (req, res) => {
