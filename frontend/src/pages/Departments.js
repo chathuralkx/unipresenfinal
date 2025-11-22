@@ -6,41 +6,86 @@ const Departments = () => {
   const departments = [
     {
       id: 1,
-      name: 'Computer Science',
-      description: 'Department of Computer Science and Engineering',
-      website: 'https://eng.pdn.ac.lk/computer/',
-      email: 'cse@eng.pdn.ac.lk',
-      phone: '+94 81 2393470',
-      icon: '💻'
+      name: 'Botany',
+      description: 'Department of Botany',
+      website: 'https://sci.pdn.ac.lk/botany/',
+      email: 'botany@pdn.ac.lk',
+      phone: '+94 81 239 4580',
+      icon: '🌿'
     },
     {
       id: 2,
-      name: 'Engineering',
-      description: 'Faculty of Engineering',
-      website: 'https://eng.pdn.ac.lk/',
-      email: 'engineering@pdn.ac.lk',
-      phone: '+94 81 2393400',
-      icon: '⚙️'
+      name: 'Chemistry',
+      description: 'Department of Chemistry',
+      website: 'https://sci.pdn.ac.lk/chemistry/',
+      email: 'headchem@sci.pdn.ac.lk',
+      phone: '+94 81 239 4420',
+      icon: '⚗️'
     },
     {
       id: 3,
-      name: 'Mathematics',
-      description: 'Department of Mathematics',
-      website: 'https://sci.pdn.ac.lk/mathematics/',
-      email: 'math@sci.pdn.ac.lk',
-      phone: '+94 81 2392100',
-      icon: '📐'
+      name: 'Environmental and  Industrial Sciences',
+      description: 'Department of Environmental and  Industrial Sciences',
+      website: 'https://sci.pdn.ac.lk/eis/',
+      email: 'headeis@sci.pdn.ac.lk',
+      phone: '+94 81 239 4646',
+      icon: '🏭'
     },
     {
       id: 4,
+      name: 'Geology',
+      description: 'Department of Geology',
+      website: 'https://sci.pdn.ac.lk/geology/',
+      email: 'geology@pdn.ac.lk',
+      phone: '+94 81 239 4200',
+      icon: '🪨'
+    },
+    {
+      id: 5,
+      name: 'Mathematics',
+      description: 'Department of Mathematics',
+      website: 'https://sci.pdn.ac.lk/maths/',
+      email: 'maths@pdn.ac.lk',
+      phone: '+94 81 239 4551',
+      icon: '📐'
+    },
+    {
+      id: 6,
+      name: 'Molecular Biology and Biotechnology',
+      description: 'Department of Molecular Biology and Biotechnology',
+      website: 'https://sci.pdn.ac.lk/molecular/',
+      email: 'sanathr@pdn.ac.lk',
+      phone: ' +94 81 239 4406',
+      icon: '🧬'
+    },
+    {
+      id: 7,
       name: 'Physics',
       description: 'Department of Physics',
       website: 'https://sci.pdn.ac.lk/physics/',
-      email: 'physics@sci.pdn.ac.lk',
-      phone: '+94 81 2392200',
-      icon: '🔬'
+      email: 'sphysics@pdn.ac.lk',
+      phone: ' +94 81 239 4580',
+      icon: '🔭'
     },
-    // Add more departments as needed
+    {
+      id: 8,
+      name: 'Statistics and Computer Science',
+      description: 'Department of Statistics and Computer Science',
+      website: 'https://sci.pdn.ac.lk/scs/',
+      email: 'headscs@sci.pdn.ac.lk',
+      phone: ' +94 81 239 4251',
+      icon: '💻'
+    },
+    {
+      id: 9,
+      name: 'Zoology',
+      description: 'Department of Zoologyy',
+      website: 'https://sci.pdn.ac.lk/zoology/',
+      email: 'hdzoology@pdn.ac.lk',
+      phone: ' +94 81 239 4471',
+      icon: '🦁'
+    },
+    
   ];
 
   const handleVisitWebsite = (website) => {
