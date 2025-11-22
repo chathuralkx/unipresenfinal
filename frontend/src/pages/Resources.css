@@ -14,9 +14,12 @@
 }
 
 .resources-header h1 {
-  margin: 0;
-  color: #333;
   font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .resources-header p {
@@ -129,6 +132,7 @@
   margin: 0.5rem 0;
   color: #666;
   font-size: 0.95rem;
+  text-align: left;
 }
 
 .status.available {

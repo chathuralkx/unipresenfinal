@@ -113,8 +113,8 @@ const Bookings = () => {
     <div className="bookings-page page-animate">
       <div className="bookings-header">
         <div>
-          <h1>My Bookings</h1>
-          <p>Manage your resource bookings</p>
+          <h1> Bookings Management</h1>
+          <p>Manage your resources bookings</p>
         </div>
         <button className="btn-primary" onClick={() => setShowModal(true)}>
           + New Booking
@@ -160,19 +160,18 @@ const Bookings = () => {
             <div key={booking.booking_id} className="booking-item">
               <div className="booking-main">
                 <div className="booking-info">
-                  <h3>{booking.resource_name}</h3>
+                  <h4>{booking.resource_name}</h4>
                   <p className="booking-meta">
-                    <span>{booking.resource_type}</span>
-                    {canApprove && <span>By: {booking.user_name}</span>}
+                    {canApprove && <span><strong>By :</strong> {booking.user_name}</span>}
                   </p>
                   <p className="booking-time">
-                    <strong>📅 Time:</strong> {new Date(booking.start_time).toLocaleString()} 
-                    {' → '}
-                    {new Date(booking.end_time).toLocaleString()}
+                    <strong>Start Time :</strong> {new Date(booking.start_time).toLocaleString()} 
+                    <br />
+                    <strong>End Time :</strong> {new Date(booking.end_time).toLocaleString()}
                   </p>
                   {booking.purpose && (
                     <p className="booking-purpose">
-                      <strong>Purpose:</strong> {booking.purpose}
+                      <strong>Purpose :</strong> {booking.purpose}
                     </p>
                   )}
                 </div>

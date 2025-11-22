@@ -10,8 +10,10 @@ import {
   FaBuilding,
   FaUsers,
   FaClipboardList,
-  FaHourglassHalf
+  FaHourglassHalf,
+  FaBan
 } from 'react-icons/fa';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 const Dashboard = () => {
   const { currentUser, logout } = useAuth();
@@ -117,7 +119,7 @@ const StudentDashboard = ({ data }) => (
   
   <div className="stat-card green">
     <div className="stat-icon">
-      <FaUsers />
+      <FaCheckCircle />
     </div>
     <div className="stat-details">
       <h3>{data?.approvedBookings || 0}</h3>
@@ -127,7 +129,7 @@ const StudentDashboard = ({ data }) => (
   
   <div className="stat-card purple">
     <div className="stat-icon">
-      <FaHourglassHalf />
+      <FaBuilding />
     </div>
     <div className="stat-details">
       <h3>{data?.availableResources || 0}</h3>
@@ -165,7 +167,7 @@ const LecturerDashboard = ({ data }) => (
     <div className="stats-grid">
       <div className="stat-card blue">
         <div className="stat-icon">
-          <FaBook />
+          <FaClipboardList />
         </div>
         <div className="stat-details">
           <h3>{data?.totalBookings || 0}</h3>
@@ -175,7 +177,7 @@ const LecturerDashboard = ({ data }) => (
       
       <div className="stat-card green">
         <div className="stat-icon">
-          <FaClipboardList />
+          <FaCheckCircle />
         </div>
         <div className="stat-details">
           <h3>{data?.approvedBookings || 0}</h3>
@@ -212,7 +214,7 @@ const OfficeStaffDashboard = ({ data }) => (
     <div className="stats-grid">
       <div className="stat-card blue">
         <div className="stat-icon">
-          <FaBook />
+          <FaClipboardList />
         </div>
         <div className="stat-details">
           <h3>{data?.bookingStats?.total_bookings || 0}</h3>
@@ -232,7 +234,7 @@ const OfficeStaffDashboard = ({ data }) => (
       
       <div className="stat-card green">
         <div className="stat-icon">
-          <FaClipboardList />
+          <FaCheckCircle />
         </div>
         <div className="stat-details">
           <h3>{data?.bookingStats?.approved_count || 0}</h3>
@@ -242,7 +244,7 @@ const OfficeStaffDashboard = ({ data }) => (
       
       <div className="stat-card red">
         <div className="stat-icon">
-          <FaBook />
+          <AiOutlineCloseCircle />
         </div>
         <div className="stat-details">
           <h3>{data?.bookingStats?.rejected_count || 0}</h3>
@@ -281,7 +283,9 @@ const AdminDashboard = ({ data }) => (
     
     <div className="stats-grid">
   <div className="stat-card blue">
-    <div className="stat-icon">👥</div>
+    <div className="stat-icon">
+      <FaUsers/>
+    </div>
     <div className="stat-details">
       <h3>{data.systemOverview.total_users}</h3>
       <p>Total Users</p>
@@ -289,7 +293,9 @@ const AdminDashboard = ({ data }) => (
   </div>
   
   <div className="stat-card green">
-    <div className="stat-icon">🏢</div>
+    <div className="stat-icon">
+      <FaBuilding />
+    </div>
     <div className="stat-details">
       <h3>{data.systemOverview.total_resources}</h3>
       <p>Total Resources</p>
@@ -297,7 +303,9 @@ const AdminDashboard = ({ data }) => (
   </div>
   
   <div className="stat-card purple">
-    <div className="stat-icon">📋</div>
+    <div className="stat-icon">
+      <FaClipboardList />
+    </div>
     <div className="stat-details">
       <h3>{data.systemOverview.total_bookings}</h3>
       <p>Total Bookings</p>
@@ -305,8 +313,9 @@ const AdminDashboard = ({ data }) => (
   </div>
   
   <div className="stat-card orange">
-    <div className="stat-icon"></div>
+    <div className="stat-icon">
       <FaHourglassHalf/>
+    </div>
     <div className="stat-details">
       <h3>{data.systemOverview.pending_bookings}</h3>
       <p>Pending Approvals</p>
