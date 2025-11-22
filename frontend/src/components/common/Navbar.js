@@ -57,12 +57,31 @@ const Navbar = () => {
           </Link>
 
           <Link 
+            to="/sessions" 
+            className={`nav-link ${location.pathname === '/sessions' ? 'active' : ''}`}
+          >
+            <span className="nav-icon"></span>
+            Sessions
+          </Link>
+
+            {currentUser?.role === 'student' && (
+          <Link 
+            to="/scan-qr" 
+            className={`nav-link ${location.pathname === '/scan-qr' ? 'active' : ''}`}
+          >
+            <span className="nav-icon"></span>
+            Scan QR
+          </Link>
+          )} 
+
+          
+          <Link 
             to="/departments" 
             className={`nav-link ${location.pathname === '/departments' ? 'active' : ''}`}
           >
             <span className="nav-icon"></span>
             Departments
-        </Link>
+          </Link>
 
           {(currentUser?.role === 'admin' || currentUser?.role === 'office_staff') && (
             <Link 

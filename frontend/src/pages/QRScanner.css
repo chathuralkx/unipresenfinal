@@ -1,0 +1,155 @@
+.qr-scanner-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.scanner-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.scanner-header h1 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scanner-header p {
+  margin: 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.scanner-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.start-screen {
+  text-align: center;
+  padding: 2rem;
+}
+
+.scan-icon {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.start-screen h2 {
+  margin: 1rem 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.start-screen p {
+  margin: 0.5rem 0 2rem 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.btn-start-scan {
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-start-scan:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.instructions {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.instructions h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin: 0.8rem 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.scanning-screen {
+  text-align: center;
+}
+
+#qr-reader {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.btn-stop-scan {
+  padding: 1rem 2rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-stop-scan:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .qr-scanner-page {
+    padding: 1rem;
+  }
+
+  .scanner-container {
+    padding: 1rem;
+  }
+
+  .scan-icon {
+    font-size: 4rem;
+  }
+
+  .btn-start-scan {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}

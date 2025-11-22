@@ -130,10 +130,7 @@ const Register = () => {
             >
               <option value="student">Student</option>
               <option value="lecturer">Lecturer</option>
-              <option value="office_staff">Office Staff</option>
-              <option value="Lab Assistant">Lab Assistant</option>
-              <option value="Lecture Assistant">Lecture Assistant</option>
-              <option value="Faculty Management">Faculty Management</option>
+              <option value="office_staff">Non-Academic Staff</option>
             </select>
           </div>
 

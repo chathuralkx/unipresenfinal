@@ -1,0 +1,287 @@
+.sessions-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.sessions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sessions-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sessions-header p {
+  margin: 0.5rem 0 0 0;
+  color: #666;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.session-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.session-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.course-badge {
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.session-info {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.session-info p {
+  margin: 0.6rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.attendance-status {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.present {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.late {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.absent {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.session-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-qr,
+.btn-attendance {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-qr {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-qr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-attendance {
+  background: #28a745;
+  color: white;
+}
+
+.btn-attendance:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+/* QR Modal Styles */
+.qr-modal {
+  max-width: 600px;
+}
+
+.qr-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.qr-info {
+  margin-bottom: 2rem;
+}
+
+.qr-info h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.qr-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.scan-instruction {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #e8f4f8;
+  border-radius: 8px;
+  color: #0c5460;
+  font-weight: 600;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.qr-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn-download,
+.btn-print {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-download {
+  background: #007bff;
+  color: white;
+}
+
+.btn-download:hover {
+  background: #0056b3;
+}
+
+.btn-print {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-print:hover {
+  background: #5a6268;
+}
+
+.qr-expiry {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #fff3cd;
+  border-radius: 8px;
+  color: #856404;
+  font-weight: 600;
+}
+
+.no-sessions {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .sessions-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sessions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .session-actions {
+    flex-direction: column;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .qr-code-container,
+  .qr-code-container * {
+    visibility: visible;
+  }
+  
+  .qr-code-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
