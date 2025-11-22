@@ -121,7 +121,7 @@ const Resources = () => {
       <div className="resources-header">
         <div>
           <h1>Resources Management</h1>
-          <p>View and manage university resources</p>
+          <p>View and book your resources</p>
         </div>
         {canManage && (
           <button 
@@ -144,7 +144,6 @@ const Resources = () => {
           <option value="lab">Laboratory</option>
           <option value="lecture_hall">Lecture Hall</option>
           <option value="equipment">Equipment</option>
-          <option value="venue">Venue</option>
         </select>
 
         <select 
@@ -175,13 +174,13 @@ const Resources = () => {
               </div>
               
               <div className="resource-details">
-                <p><strong>📍 Location:</strong> {resource.location}</p>
+                <p><strong>Location:</strong> {resource.location}</p>
                 {resource.capacity && (
-                  <p><strong>👥 Capacity:</strong> {resource.capacity}</p>
+                  <p><strong>Capacity:</strong> {resource.capacity}</p>
                 )}
-                <p><strong>🏢 Department:</strong> {resource.department_name || 'N/A'}</p>
+                <p><strong>Department:</strong> {resource.department_name || 'N/A'}</p>
                 {resource.description && (
-                  <p><strong>📝 Description:</strong> {resource.description}</p>
+                  <p><strong>Description:</strong> {resource.description}</p>
                 )}
                 <p>
                   <strong>Status:</strong>{' '}
@@ -245,7 +244,6 @@ const Resources = () => {
                   <option value="lab">Laboratory</option>
                   <option value="lecture_hall">Lecture Hall</option>
                   <option value="equipment">Equipment</option>
-                  <option value="venue">Venue</option>
                 </select>
               </div>
 
@@ -276,9 +274,15 @@ const Resources = () => {
                   value={formData.department_id}
                   onChange={(e) => setFormData({ ...formData, department_id: e.target.value })}
                 >
-                  <option value="1">Computer Science</option>
-                  <option value="2">Engineering</option>
+                  <option value="1">Statistics & Computer Science</option>
+                  <option value="2">Chemistry</option>
                   <option value="3">Mathematics</option>
+                  <option value="4">Physics</option>
+                  <option value="5">Geology</option>
+                  <option value="6">Botany</option>
+                  <option value="7">Environmental and Industrial Sciences</option>
+                  <option value="8">Molecular Biology & Biotechnology</option>
+                  <option value="9">Zoology</option>
                 </select>
               </div>
 

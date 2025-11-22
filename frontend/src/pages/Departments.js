@@ -2,25 +2,24 @@ import React from 'react';
 import './Departments.css';
 
 const Departments = () => {
-  // Add your department data here with links
   const departments = [
     {
       id: 1,
-      name: 'Botany',
-      description: 'Department of Botany',
-      website: 'https://sci.pdn.ac.lk/botany/',
-      email: 'botany@pdn.ac.lk',
-      phone: '+94 81 239 4580',
-      icon: '🌿'
+      name: 'Statistics & Computer Science',
+      description: 'Department of Statistics & Computer Science',
+      website: 'https://sci.pdn.ac.lk/scs/',
+      email: 'headscs@sci.pdn.ac.lk',
+      phone: '+94 81 239 4251',
+      
     },
     {
       id: 2,
       name: 'Chemistry',
       description: 'Department of Chemistry',
       website: 'https://sci.pdn.ac.lk/chemistry/',
-      email: 'headchem@sci.pdn.ac.lk',
-      phone: '+94 81 239 4420',
-      icon: '⚗️'
+      email: 'eheadchem@sci.pdn.ac.lk',
+      phone: ' +94 81 239 4420',
+      
     },
     {
       id: 3,
@@ -44,10 +43,10 @@ const Departments = () => {
       id: 5,
       name: 'Mathematics',
       description: 'Department of Mathematics',
-      website: 'https://sci.pdn.ac.lk/maths/',
+      website: 'https://sci.pdn.ac.lk/mathematics/',
       email: 'maths@pdn.ac.lk',
       phone: '+94 81 239 4551',
-      icon: '📐'
+      
     },
     {
       id: 6,
@@ -63,29 +62,53 @@ const Departments = () => {
       name: 'Physics',
       description: 'Department of Physics',
       website: 'https://sci.pdn.ac.lk/physics/',
-      email: 'sphysics@pdn.ac.lk',
-      phone: ' +94 81 239 4580',
-      icon: '🔭'
+      email: 'physics@pdn.ac.lk',
+      phone: '+94 81 239 4580',
+      
+    },
+    {
+      id: 5,
+      name: 'Geology',
+      description: 'Department of Geology',
+      website: 'hhttps://sci.pdn.ac.lk/geology//',
+      email: 'geology@pdn.ac.lk',
+      phone: '+94 81 239 4200',
+      
+    },
+    {
+      id: 6,
+      name: 'Botany',
+      description: 'Department of Botany',
+      website: 'https://sci.pdn.ac.lk/botany/',
+      email: 'botany@pdn.ac.lk',
+      phone: '+94 81 239 4580',
+      
+    },
+    {
+      id: 7,
+      name: 'Environmental and Industrial Sciences',
+      description: 'Department of nvironmental and Industrial Sciences',
+      website: 'https://sci.pdn.ac.lk/eis/',
+      email: 'headeis@sci.pdn.ac.lk',
+      phone: '+94 81 239 4646',
+      
     },
     {
       id: 8,
-      name: 'Statistics and Computer Science',
-      description: 'Department of Statistics and Computer Science',
-      website: 'https://sci.pdn.ac.lk/scs/',
-      email: 'headscs@sci.pdn.ac.lk',
-      phone: ' +94 81 239 4251',
-      icon: '💻'
+      name: 'Molecular Biology & Biotechnology',
+      description: 'Department of Molecular Biology & Biotechnology',
+      website: 'https://sci.pdn.ac.lk/molecular/',
+      email: 'sanathr@pdn.ac.lk',
+      phone: '+94 81 239 4406',
     },
     {
       id: 9,
       name: 'Zoology',
-      description: 'Department of Zoologyy',
+      description: 'Department of Zoology',
       website: 'https://sci.pdn.ac.lk/zoology/',
       email: 'hdzoology@pdn.ac.lk',
-      phone: ' +94 81 239 4471',
-      icon: '🦁'
+      phone: '+94 81 239 4471',
     },
-    
   ];
 
   const handleVisitWebsite = (website) => {
@@ -96,7 +119,7 @@ const Departments = () => {
     <div className="departments-page">
       <div className="departments-header">
         <h1>Academic Departments</h1>
-        <p>Explore our departments and visit their official websites</p>
+        <p>Explore the departments and enroll for courses</p>
       </div>
 
       <div className="departments-grid">
@@ -110,14 +133,14 @@ const Departments = () => {
               
               <div className="dept-info">
                 <div className="info-item">
-                  <span className="info-label">📧 Email:</span>
+                  <span className="info-label">Email :</span>
                   <a href={`mailto:${dept.email}`} className="info-value">
                     {dept.email}
                   </a>
                 </div>
                 
                 <div className="info-item">
-                  <span className="info-label">📞 Phone:</span>
+                  <span className="info-label">Contact :</span>
                   <span className="info-value">{dept.phone}</span>
                 </div>
               </div>

@@ -27,8 +27,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <span className="brand-icon">🎓</span>
-          <span className="brand-text">Faculty Resource Management</span>
+          <span className="brand-icon"><img src="/logo.png" width="100"/></span>
+          <span className="brand-text"><h3>Faculty of Science</h3></span>
         </div>
 
         <div className="navbar-menu">
@@ -36,7 +36,7 @@ const Navbar = () => {
             to="/" 
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
           >
-            <span className="nav-icon">📊</span>
+            <span className="nav-icon"></span>
             Dashboard
           </Link>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
             to="/resources" 
             className={`nav-link ${location.pathname === '/resources' ? 'active' : ''}`}
           >
-            <span className="nav-icon">🏢</span>
+            <span className="nav-icon"></span>
             Resources
           </Link>
 
@@ -52,7 +52,7 @@ const Navbar = () => {
             to="/bookings" 
             className={`nav-link ${location.pathname === '/bookings' ? 'active' : ''}`}
           >
-            <span className="nav-icon">📅</span>
+            <span className="nav-icon"></span>
             Bookings
           </Link>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
             to="/departments" 
             className={`nav-link ${location.pathname === '/departments' ? 'active' : ''}`}
           >
-            <span className="nav-icon">🏛️</span>
+            <span className="nav-icon"></span>
             Departments
         </Link>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
               to="/users" 
               className={`nav-link ${location.pathname === '/users' ? 'active' : ''}`}
             >
-              <span className="nav-icon">👥</span>
+              <span className="nav-icon"></span>
               Users
             </Link>
           )}
