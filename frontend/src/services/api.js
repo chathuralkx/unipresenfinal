@@ -4,7 +4,7 @@ const API_URL = 'http://localhost:5000/api';
 
 // Create axios instance
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: 'http://localhost:5000/api',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -107,27 +107,6 @@ export const userAPI = {
   
   delete: (id) => 
     api.delete(`/users/${id}`)
-};
-
-// Sessions API calls
-export const sessionAPI = {
-  getAll: () => 
-    api.get('/sessions'),
-  
-  getById: (id) => 
-    api.get(`/sessions/${id}`),
-  
-  create: (data) => 
-    api.post('/sessions', data),
-  
-  markAttendance: (qrCode) => 
-    api.post('/sessions/mark-attendance', { qrCode }),
-  
-  getSessionAttendance: (id) => 
-    api.get(`/sessions/${id}/attendance`),
-  
-  getMyAttendance: () => 
-    api.get('/sessions/student/attendance')
 };
 
 export default api;
