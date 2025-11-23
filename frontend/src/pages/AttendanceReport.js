@@ -133,7 +133,7 @@ const AttendanceReport = () => {
                   <td>{record.student_email}</td>
                   <td>
                     <span className={`status-badge ${record.status}`}>
-                      {record.status === 'present' ? '✅' : '⏰'} {record.status.toUpperCase()}
+                      {record.status === 'present' ? '' : ''} {record.status.toUpperCase()}
                     </span>
                   </td>
                   <td>{new Date(record.marked_at).toLocaleString()}</td>

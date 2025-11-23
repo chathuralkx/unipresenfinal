@@ -145,7 +145,7 @@ const Sessions = () => {
                 <div className="attendance-status">
                   {session.attendance_status ? (
                     <span className={`status-badge ${session.attendance_status}`}>
-                      ✅ {session.attendance_status.toUpperCase()}
+                       {session.attendance_status.toUpperCase()}
                     </span>
                   ) : (
                     <span className="status-badge absent">

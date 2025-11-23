@@ -10,14 +10,22 @@ const QRScanner = () => {
   const [scanner, setScanner] = useState(null);
 
   useEffect(() => {
+    // Cleanup when component unmounts
     return () => {
       if (scanner) {
-        scanner.clear();
+        scanner.clear().catch(err => console.log('Scanner cleanup:', err));
       }
     };
   }, [scanner]);
 
-  const startScanning = () => {
+  useEffect(() => {
+    // Initialize scanner when scanning becomes true
+    if (scanning && !scanner) {
+      initScanner();
+    }
+  }, [scanning]);
+
+  const initScanner = () => {
     const html5QrcodeScanner = new Html5QrcodeScanner(
       "qr-reader",
       { 
@@ -30,6 +38,9 @@ const QRScanner = () => {
 
     html5QrcodeScanner.render(onScanSuccess, onScanError);
     setScanner(html5QrcodeScanner);
+  };
+
+  const startScanning = () => {
     setScanning(true);
   };
 
@@ -37,7 +48,8 @@ const QRScanner = () => {
     try {
       // Stop scanning
       if (scanner) {
-        scanner.clear();
+        await scanner.clear();
+        setScanner(null);
       }
       setScanning(false);
 
@@ -61,23 +73,28 @@ const QRScanner = () => {
       
       // Restart scanner after error
       setTimeout(() => {
-        startScanning();
+        setScanning(false);
+        setTimeout(() => {
+          setScanning(true);
+        }, 500);
       }, 2000);
     }
   };
 
   const onScanError = (error) => {
-    // Ignore common scanning errors
-    if (error && !error.includes('NotFoundException')) {
-      console.warn('QR Scan Error:', error);
-    }
+    // Ignore common scanning errors - they're just "not found" errors while scanning
   };
 
-  const stopScanning = () => {
+  const stopScanning = async () => {
     if (scanner) {
-      scanner.clear();
-      setScanning(false);
+      try {
+        await scanner.clear();
+        setScanner(null);
+      } catch (err) {
+        console.log('Stop scanning error:', err);
+      }
     }
+    setScanning(false);
   };
 
   return (
@@ -91,7 +108,7 @@ const QRScanner = () => {
         {!scanning ? (
           <div className="start-screen">
             <div className="scan-icon">
-                <FaCamera/>
+              <FaCamera/>
             </div>
             <h2>Ready to Scan</h2>
             <p>Click the button below to start scanning</p>
